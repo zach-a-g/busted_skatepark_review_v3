@@ -19,15 +19,15 @@ class Reviews {
     }
 
     async addReview() {
-         try {
-             const query = `INSERT INTO reviews (score, content, park_id, user_id) VALUES (${this.score}, '${this.review_content}', ${this.park_id}, 9)`;
-             const response = await db.result(query);
-             console.log("response", response);
-             return response;
-         } catch (err) {
-             return err.message;
-         }
+        try {
+            const query = `INSERT INTO reviews (score, content, park_id, user_id) VALUES (${this.score}, '${this.review_content}', ${this.park_id}, 1)`;
+            const response = await db.result(query);
+            console.log("response", response);
+            return response;
+        } catch (err) {
+            return err.message;
+        }
     }
-}
+};
 
 module.exports = Reviews;
